@@ -4,4 +4,4 @@ before_install:
   - sudo apt-get install python3.5
   - sudo curl https://raw.githubusercontent.com/SivilTaram/TAScripts/master/CIScripts/python/check.py > check.py
 script:
-  - python check.py
+  - python3 check.py
