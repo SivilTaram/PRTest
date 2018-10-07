@@ -1,7 +1,7 @@
-language: python
 sudo: required
 before_install:
   - sudo apt-get install python3.5
   - sudo curl https://raw.githubusercontent.com/SivilTaram/TAScripts/master/CIScripts/python/check.py > check.py
 script:
-  - python3 check.py
+  - dir=$(ls -l | grep ^d | awk '/^d/ {print i$NF}' i=`pwd`'/')
+  - for i in $dir;do python3 check.py $i; done
