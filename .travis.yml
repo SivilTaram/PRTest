@@ -1,4 +1,7 @@
 sudo: required
+branches:
+  only:
+  - master
 before_install:
   - sudo apt-get install python3.5
   - sudo apt-get install jq
