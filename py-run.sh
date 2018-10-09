@@ -3,6 +3,7 @@ set -v
 logfile=log.txt
 dir=$(ls -l | grep ^d | awk '/^d/ {print i$NF}' i=`pwd`'/')
 curl -X GET "https://api.github.com/repos/$TRAVIS_REPO_SLUG/pulls/$TRAVIS_PULL_REQUEST/commits" > commit.log
+cat commit.log
 lastCommit=`cat commit.log | jq '.[-1].sha' -r`
 shellSuccess=0
 
