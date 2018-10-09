@@ -9,7 +9,6 @@ before_install:
   - wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
   - sudo chmod +x jq-linux64
   - sudo mv jq-linux64 $(which jq)
-  - sudo curl https://raw.githubusercontent.com/SivilTaram/TAScripts/master/CIScripts/python/check.py > check.py
 before_script:
   - sudo chmod ugo+x ./py-run.sh
 script:
